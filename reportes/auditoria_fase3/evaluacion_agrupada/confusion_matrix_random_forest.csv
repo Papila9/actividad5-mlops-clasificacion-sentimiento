@@ -1,0 +1,4 @@
+actual\predicted,negative,neutral,positive
+negative,1518,214,104
+neutral,179,358,83
+positive,87,79,306

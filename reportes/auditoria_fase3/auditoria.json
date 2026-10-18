@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-10-17T22:20:12-06:00",
+  "dataset_source": {
+    "dataset_name": "Twitter US Airline Sentiment",
+    "publisher_platform": "Kaggle",
+    "page_owner": "crowdflower (URL owner); page credits Figure Eight and one collaborator",
+    "original_source_entity": "Crowdflower's Data for Everyone library, as stated on the Kaggle dataset page",
+    "url": "https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment/data",
+    "consulted_on": "2026-10-17",
+    "local_file_match_evidence": "Kaggle lists Tweets.csv as 3.42 MB; the local file is 3,421,431 bytes and has the expected airline sentiment fields. The Kaggle page says its copy is slightly reformatted from the original Crowdflower data.",
+    "provenance_limit": "No publisher checksum or local download record exists, so byte-level provenance cannot be authenticated from the project alone.",
+    "license_shown_on_page": "CC BY-NC-SA 4.0"
+  },
+  "dataset": {
+    "columns": [
+      "text",
+      "airline_sentiment"
+    ],
+    "rows": 14640,
+    "sha256": "82539f706fdafc80f93dec7ae1cfc2310c179952f41548ed5c3ddf36effd67dd"
+  },
+  "original_split_duplicate_analysis": {
+    "train_rows": 11712,
+    "test_rows": 2928,
+    "train_class_counts": {
+      "negative": 7343,
+      "neutral": 2479,
+      "positive": 1890
+    },
+    "test_class_counts": {
+      "negative": 1835,
+      "neutral": 620,
+      "positive": 473
+    },
+    "shared_unique_texts": 71,
+    "shared_unique_texts_same_label_only": 60,
+    "shared_texts_with_same_label_in_both_splits": 63,
+    "shared_texts_with_conflicting_labels_across_splits": 11,
+    "shared_texts_whose_full_dataset_labels_conflict": 11,
+    "unique_text_groups": 14427,
+    "repeated_text_groups": 187,
+    "text_groups_with_conflicting_labels": 25,
+    "duplicate_text_label_repetitions": 188,
+    "train_test_unique_text_overlap": 71,
+    "train_test_text_overlap_row_pairs": 96
+  },
+  "existing_artifact_checks": {
+    "dataset_hash_matches_manifest": true,
+    "dataset_row_count_matches": true,
+    "logistic_regression_test_metrics_match_comparison_csv": true,
+    "logistic_regression_selected_cv_folds_match_csv": true,
+    "logistic_regression_confusion_matrix_matches_csv": true,
+    "logistic_regression_confusion_matrix_total_matches_test_rows": true,
+    "logistic_regression_classification_support_matches_test_matrix": true,
+    "logistic_regression_per_class_report_metrics_match_matrix": true,
+    "random_forest_test_metrics_match_comparison_csv": true,
+    "random_forest_selected_cv_folds_match_csv": true,
+    "random_forest_confusion_matrix_matches_csv": true,
+    "random_forest_confusion_matrix_total_matches_test_rows": true,
+    "random_forest_classification_support_matches_test_matrix": true,
+    "random_forest_per_class_report_metrics_match_matrix": true,
+    "logistic_regression_params_reproduced": true,
+    "logistic_regression_cv_folds_reproduced": true,
+    "logistic_regression_test_metrics_reproduced": true,
+    "random_forest_params_reproduced": true,
+    "random_forest_cv_folds_reproduced": true,
+    "random_forest_test_metrics_reproduced": true
+  },
+  "all_existing_artifact_checks_pass": true,
+  "original_reproduction": "Saved separately under reproduccion_split_original; compare its metrics and params to reportes/entrenamiento.",
+  "grouped_evaluation_path": "evaluacion_agrupada/; separate scenario, does not replace original metrics.",
+  "grouped_evaluation_protocol": {
+    "splitter": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42); primer fold como holdout",
+    "inner_cv": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42)",
+    "train_rows": 11712,
+    "test_rows": 2928,
+    "test_fraction": 0.2,
+    "train_class_counts": {
+      "negative": 7342,
+      "neutral": 2479,
+      "positive": 1891
+    },
+    "test_class_counts": {
+      "negative": 1836,
+      "neutral": 620,
+      "positive": 472
+    },
+    "train_unique_text_groups": 11542,
+    "test_unique_text_groups": 2885,
+    "train_test_text_overlap": 0,
+    "selection_metric": "f1_macro",
+    "random_seed": 42,
+    "data_sha256": "82539f706fdafc80f93dec7ae1cfc2310c179952f41548ed5c3ddf36effd67dd"
+  }
+}

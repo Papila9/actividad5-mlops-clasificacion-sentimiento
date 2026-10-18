@@ -1,0 +1,209 @@
+{
+  "generated_at": "2026-10-17T22:18:37-06:00",
+  "data": {
+    "path": "datos/datos_limp/Tweets_limpios.csv",
+    "sha256": "82539f706fdafc80f93dec7ae1cfc2310c179952f41548ed5c3ddf36effd67dd",
+    "rows": 14640,
+    "columns": [
+      "text",
+      "airline_sentiment"
+    ]
+  },
+  "protocol": {
+    "random_seed": 42,
+    "test_size": 0.2,
+    "train_size": 11712,
+    "test_rows": 2928,
+    "cv": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+    "selection_metric": "f1_macro",
+    "tfidf_fitted_within_pipeline": true,
+    "python": "3.13.3",
+    "scikit_learn": "1.9.1",
+    "duplicate_text_train_test_overlap": 71,
+    "class_counts_train": {
+      "negative": 7343,
+      "neutral": 2479,
+      "positive": 1890
+    },
+    "class_counts_test": {
+      "negative": 1835,
+      "neutral": 620,
+      "positive": 473
+    },
+    "cv_note": "Los puntajes por fold corresponden al candidato ganador elegido por la misma búsqueda; son descriptivos, no una prueba de significancia."
+  },
+  "dependency_versions": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "mlflow": null
+  },
+  "models": {
+    "logistic_regression": {
+      "best_params": {
+        "classifier__C": 3.0,
+        "tfidf__ngram_range": [
+          1,
+          2
+        ]
+      },
+      "best_cv_f1_macro": 0.743754150344181,
+      "cv_selected_candidate": {
+        "fold_f1_macro": [
+          0.7557965018640136,
+          0.7473007080830056,
+          0.7487708649018856,
+          0.7334503250094618,
+          0.7334523518625383
+        ],
+        "mean_f1_macro": 0.743754150344181,
+        "std_f1_macro": 0.009938053070902425
+      },
+      "test_metrics": {
+        "accuracy": 0.798155737704918,
+        "precision_macro": 0.7444141279061508,
+        "recall_macro": 0.7504402915194986,
+        "f1_macro": 0.7457002530158143,
+        "f1_weighted": 0.801300564968208,
+        "roc_auc_ovr_macro": 0.9110245729780063,
+        "roc_auc_note": null
+      },
+      "classification_report": {
+        "negative": {
+          "precision": 0.8938103350369109,
+          "recall": 0.8577656675749319,
+          "f1-score": 0.8754171301446051,
+          "support": 1835.0
+        },
+        "neutral": {
+          "precision": 0.6041379310344828,
+          "recall": 0.7064516129032258,
+          "f1-score": 0.6513011152416357,
+          "support": 620.0
+        },
+        "positive": {
+          "precision": 0.7352941176470589,
+          "recall": 0.6871035940803383,
+          "f1-score": 0.7103825136612022,
+          "support": 473.0
+        },
+        "accuracy": 0.798155737704918,
+        "macro avg": {
+          "precision": 0.7444141279061508,
+          "recall": 0.7504402915194986,
+          "f1-score": 0.7457002530158143,
+          "support": 2928.0
+        },
+        "weighted avg": {
+          "precision": 0.806865300437558,
+          "recall": 0.798155737704918,
+          "f1-score": 0.801300564968208,
+          "support": 2928.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1574,
+          204,
+          57
+        ],
+        [
+          122,
+          438,
+          60
+        ],
+        [
+          65,
+          83,
+          325
+        ]
+      ],
+      "fit_duration_seconds": 21.42,
+      "grid_candidate_count": 4
+    },
+    "random_forest": {
+      "best_params": {
+        "classifier__max_depth": 30,
+        "classifier__max_features": "sqrt",
+        "classifier__min_samples_leaf": 3,
+        "classifier__n_estimators": 60,
+        "tfidf__max_features": 10000
+      },
+      "best_cv_f1_macro": 0.6879297837663303,
+      "cv_selected_candidate": {
+        "fold_f1_macro": [
+          0.6817636687667988,
+          0.6809767152604795,
+          0.6910719207048941,
+          0.6942606988554423,
+          0.6915759152440367
+        ],
+        "mean_f1_macro": 0.6879297837663303,
+        "std_f1_macro": 0.0061158384746789855
+      },
+      "test_metrics": {
+        "accuracy": 0.7278005464480874,
+        "precision_macro": 0.6606111462729187,
+        "recall_macro": 0.6742107250865231,
+        "f1_macro": 0.6657865286314406,
+        "f1_weighted": 0.7330150717575556,
+        "roc_auc_ovr_macro": 0.8639531091782983,
+        "roc_auc_note": null
+      },
+      "classification_report": {
+        "negative": {
+          "precision": 0.8495061011040093,
+          "recall": 0.7967302452316076,
+          "f1-score": 0.8222722159730034,
+          "support": 1835.0
+        },
+        "neutral": {
+          "precision": 0.5115646258503401,
+          "recall": 0.6064516129032258,
+          "f1-score": 0.5549815498154982,
+          "support": 620.0
+        },
+        "positive": {
+          "precision": 0.6207627118644068,
+          "recall": 0.6194503171247357,
+          "f1-score": 0.6201058201058202,
+          "support": 473.0
+        },
+        "accuracy": 0.7278005464480874,
+        "macro avg": {
+          "precision": 0.6606111462729187,
+          "recall": 0.6742107250865231,
+          "f1-score": 0.6657865286314406,
+          "support": 2928.0
+        },
+        "weighted avg": {
+          "precision": 0.740995398314526,
+          "recall": 0.7278005464480874,
+          "f1-score": 0.7330150717575556,
+          "support": 2928.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1462,
+          274,
+          99
+        ],
+        [
+          164,
+          376,
+          80
+        ],
+        [
+          95,
+          85,
+          293
+        ]
+      ],
+      "fit_duration_seconds": 18.669,
+      "grid_candidate_count": 4
+    }
+  }
+}

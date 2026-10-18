@@ -1,0 +1,32 @@
+{
+  "processed_at": "2026-10-17T21:59:13-06:00",
+  "source": {
+    "path": "Tweets.csv",
+    "size_bytes": 3421431,
+    "sha256": "ea94b23f41892b290dec3330bb8cf9cb6b8bc669eaae5f3a84c40f7b0de8f15e",
+    "rows": 14640
+  },
+  "processed": {
+    "path": "Tweets_limpios.csv",
+    "size_bytes": 1690493,
+    "sha256": "82539f706fdafc80f93dec7ae1cfc2310c179952f41548ed5c3ddf36effd67dd",
+    "rows": 14640,
+    "columns": [
+      "text",
+      "airline_sentiment"
+    ]
+  },
+  "cleaning_rules": [
+    "Se conservan únicamente text y airline_sentiment.",
+    "Se eliminan espacios al inicio y final del texto.",
+    "Se recortan espacios y se convierten etiquetas a minúsculas.",
+    "Se excluyen textos vacíos y etiquetas fuera de negative, neutral, positive.",
+    "Se conservan duplicados texto-etiqueta; se contabilizan para evaluación posterior."
+  ],
+  "cleaning_actions": {
+    "excluded_empty_text": 0,
+    "excluded_invalid_label": 0,
+    "duplicate_text_label_rows_retained": 188
+  },
+  "quality_report": "calidad_datos.json"
+}

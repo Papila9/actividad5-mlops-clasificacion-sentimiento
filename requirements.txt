@@ -1,0 +1,12 @@
+# Versiones validadas en Python 3.13.3 para la Fase 3.
+pandas==3.0.6
+numpy==2.5.4
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Seguimiento de experimentos (Fase 4), validado en Python 3.13.3.
+mlflow==3.17.1
+
+# Generación del informe técnico Word.
+python-docx==1.2.0
