@@ -104,4 +104,4 @@ Abre <http://127.0.0.1:5000> y selecciona el experimento. El servidor local se p
 
 Las figuras de análisis y cinco capturas reales de MLflow están incluidas bajo `evidencias/`. El informe pdf está en `reportes/Actividad 5_Gestión de Proyectos de Inteligencia artificial.docx`.
 
-La selección de Regresión Logística se basa descriptivamente en el mayor F1 macro de la partición original y resultados similares en la evaluación agrupada; no se ha demostrado significancia estadística. El proyecto es académico, no se evaluó en producción y la evaluación usa una sola semilla. No se ha publicado en GitHub ni se han creado commits.
+La selección de Regresión Logística se basa descriptivamente en el mayor F1 macro de la partición original y resultados similares en la evaluación agrupada; no se ha demostrado significancia estadística.
