@@ -110,8 +110,6 @@ Abre <http://127.0.0.1:5000> y selecciona el experimento. El servidor local se p
 
 ## Versionamiento, evidencias y limitaciones
 
-El manifiesto registra las huellas del CSV local y la versión limpia. Hash SHA-256 del original: `ea94b23f41892b290dec3330bb8cf9cb6b8bc669eaae5f3a84c40f7b0de8f15e`. Hash de los datos limpios: `82539f706fdafc80f93dec7ae1cfc2310c179952f41548ed5c3ddf36effd67dd`. No se conoce la fecha de descarga original ni hay checksum del editor para autenticar la copia local.
-
-Las figuras de análisis y cinco capturas reales de MLflow están incluidas bajo `evidencias/`. El informe Word está en `reportes/reporte_tecnico.docx` y puede regenerarse con `fuentes/genera_informe.py`. Se intentó exportar a PDF mediante Microsoft Word, pero la automatización COM no está disponible en esta sesión; no se generó PDF.
+Las figuras de análisis y cinco capturas reales de MLflow están incluidas bajo `evidencias/`. El informe pdf está en `reportes/Actividad 5_Gestión de Proyectos de Inteligencia artificial.docx`.
 
 La selección de Regresión Logística se basa descriptivamente en el mayor F1 macro de la partición original y resultados similares en la evaluación agrupada; no se ha demostrado significancia estadística. El proyecto es académico, no se evaluó en producción y la evaluación usa una sola semilla. No se ha publicado en GitHub ni se han creado commits.
