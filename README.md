@@ -71,7 +71,7 @@ Ejecuta las pruebas usando explícitamente el Python virtual:
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-La última ejecución de la suite completó **7 pruebas con resultado OK**. MLflow mostró advertencias de que Git no está disponible en el PATH al crear los metadatos de la prueba de integración; no hicieron fallar las pruebas.
+La última ejecución de la suite completó **7 pruebas con resultado OK**. 
 
 ## Entrenamiento y resultados
 
