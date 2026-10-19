@@ -61,14 +61,6 @@ La preparación conserva el CSV original, produce una tabla de dos columnas y es
 
 Abre `fuentes/entrena.ipynb` desde el editor con kernel `.venv`. El notebook muestra la calidad, las métricas validadas y los runs de MLflow; su celda opcional de reproducción vuelve a entrenar en una carpeta temporal y compara con los resultados archivados. No se han generado resultados de notebook porque en el entorno actual no están instalados Jupyter ni `nbclient`; el JSON y el código de sus celdas se validaron estáticamente.
 
-### Informe t?cnico
-
-Despu?s de instalar las dependencias, genera el documento Word actualizado desde los resultados y evidencias existentes:
-
-```powershell
-.\.venv\Scripts\python.exe fuentes\genera_informe.py
-```
-
 La carpeta `evidencias/mlflow/` contiene las cinco capturas usadas por el generador.
 
 ### Pruebas
